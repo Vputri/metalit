@@ -63,7 +63,7 @@
           <NuxtLink
             to="/programs"
             :class="{
-              'text-blue-700 font-semibold': isActive('/program') || isActive('/programs/', true),
+              'text-blue-700 font-semibold': isActive('/programs') || isActive('/programs/', true),
             }"
             class="text-gray-700 hover:text-blue-700 transition duration-300"
           >

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 text-gray-800 font-sans">
+  <div class="min-h-screen bg-white text-gray-800 font-sans">
     <!-- Header Component -->
     <Header />
 
