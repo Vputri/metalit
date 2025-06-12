@@ -463,7 +463,7 @@
       <div class="container mx-auto text-center py-20">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">Program Not Found</h2>
         <p class="text-gray-700">The program you are looking for does not exist.</p>
-        <NuxtLink to="/program" class="text-blue-600 hover:underline mt-4 inline-block">
+        <NuxtLink to="/programs" class="text-blue-600 hover:underline mt-4 inline-block">
           Go back to Programs
         </NuxtLink>
       </div>
@@ -724,7 +724,7 @@ onMounted(() => {
   if (!program.value) {
     console.error(`Program with slug "${programSlug}" not found.`);
     // Optionally redirect:
-    // navigateTo('/program', { redirectCode: 302 });
+    // navigateTo('/programs', { redirectCode: 302 });
   }
 
   // Optional: Implement Intersection Observer for automatic active section highlighting on scroll

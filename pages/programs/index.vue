@@ -100,7 +100,7 @@
             </p>
           </div>
           <NuxtLink
-            to="/program"
+            to="/programs"
             class="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-6 py-3 rounded-full font-bold text-lg shadow-md"
           >
             Explore &rarr;
