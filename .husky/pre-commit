@@ -1,0 +1,11 @@
+// .husky/pre-commit
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Running pre-commit hook..."
+npm run lint # This will run the lint script defined in package.json
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Please fix the errors before committing."
+  exit 1
+fi
+echo "Pre-commit hook finished successfully."

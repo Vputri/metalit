@@ -1,0 +1,48 @@
+{
+  // https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "strict": true, // Enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "skipLibCheck": true, // Skip type checking of all declaration files (*.d.ts)
+    "noEmit": true, // Do not emit outputs
+    "esModuleInterop": true, // Allow default imports from modules with no default export
+    "resolveJsonModule": true, // Allow importing .json files
+    "isolatedModules": true, // Ensure that each file can be safely transpiled without relying on other files
+    "baseUrl": ".", // Base directory to resolve non-relative module names
+    "paths": {
+      // Path aliases for your project, configured by Nuxt
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "~~/*": ["./*"],
+      "@@/*": ["./*"]
+    },
+    "types": [
+      // Add types for Vitest, Cypress, etc.
+      "vitest/globals",
+      "cypress",
+      // "@nuxt/types", // If you're using Nuxt 2 bridge, otherwise Nuxt 3 handles types automatically
+      "@nuxtjs/tailwindcss" // For Tailwind CSS module types
+    ]
+  },
+  "include": [
+    // Files to include in the compilation
+    "**/*.ts",
+    "**/*.js",
+    "**/*.vue",
+    ".nuxt/**/*.ts",
+    "vitest.config.ts", // Include Vitest config
+    "cypress.config.ts", // Include Cypress config
+    "plugins/**/*.ts", // Include plugins
+    "types/**/*.d.ts" // If you have custom global type declarations
+  ],
+  "exclude": [
+    // Files to exclude from the compilation
+    "node_modules",
+    "dist",
+    ".output",
+    "public",
+    "test/e2e", // Exclude e2e tests from default tsconfig compilation if they cause issues
+    "cypress" // Exclude cypress directory from main tsconfig if it causes conflicts
+  ]
+}

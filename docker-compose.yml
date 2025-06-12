@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000' # Map host port 3000 to container port 3000
+    volumes:
+      # Mount the current directory into the container
+      # This is for local development if you want changes to reflect without rebuilding
+      # For production, you'd typically remove this volume for performance/security
+      - .:/app
+      # Exclude node_modules from the host volume to prevent issues with different OS filesystems
+      - /app/node_modules
+      # Exclude .nuxt and .output from the host volume to ensure container-generated files are not synced back
+      - /app/.nuxt
+      - /app/.output
+    environment:
+      # Set Node.js environment to development
+      NODE_ENV: development
+    # Optional: If you want to run `pnpm dev` inside the container for hot-reloading
+    # command: pnpm dev
+    # For a production-like local setup, use the CMD from Dockerfile
+    # command: node server/index.mjs
