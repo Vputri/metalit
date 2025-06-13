@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'], // Use Inter font by default
+        poppins: ['Poppins', 'sans-serif'], 
       },
       colors: {
         primary: '#3b82f6', // Example primary color

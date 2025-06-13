@@ -2,17 +2,11 @@
   <header class="bg-white shadow-md py-4 px-6 fixed top-0 left-0 w-full z-50">
     <nav class="container mx-auto flex justify-between items-center">
       <NuxtLink to="/" class="flex items-center">
-        <img
-          src="https://placehold.co/100x30/0A376B/FFFFFF?text=metalit"
-          alt="metalit logo"
-          class="h-8 mr-2"
-          onerror="this.onerror=null; this.src='https://placehold.co/100x30/0A376B/FFFFFF?text=metalit';"
-        />
-        <span class="text-2xl font-bold text-blue-700 sr-only">metalit</span>
+        <img src="/assets/img/logo.png" alt="metalit logo" class="h-8 mr-2" />
       </NuxtLink>
 
       <button
-        class="md:hidden p-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+        class="lg:hidden p-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
         @click="toggleMobileMenu"
       >
         <svg
@@ -49,7 +43,7 @@
         </svg>
       </button>
 
-      <ul class="hidden md:flex space-x-6">
+      <ul class="hidden lg:flex space-x-6">
         <li>
           <NuxtLink
             to="/"
@@ -98,7 +92,7 @@
         </li>
       </ul>
 
-      <div class="hidden md:flex space-x-4">
+      <div class="hidden lg:flex space-x-4">
         <button
           class="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition duration-300 font-semibold"
         >
@@ -126,9 +120,8 @@
           Home
         </NuxtLink>
         <NuxtLink
-          to="/program"
-          :class="{
-            'text-blue-700 font-semibold': isActive('/program') || isActive('/programs/', true),
+          to="/programs" :class="{
+            'text-blue-700 font-semibold': isActive('/programs') || isActive('/programs/', true),
           }"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
           @click="closeMobileMenu"
@@ -198,9 +191,14 @@ const closeMobileMenu = () => {
 };
 
 const isActive = (path: string, startsWith = false) => {
+  const currentPath = route.path;
+  let result;
+
   if (startsWith) {
-    return route.path.startsWith(path);
+    result = currentPath.startsWith(path);
+  } else {
+    result = currentPath === path;
   }
-  return route.path === path;
+  return result;
 };
 </script>
