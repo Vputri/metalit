@@ -110,7 +110,6 @@
         <!-- Search Bar -->
         <div class="mb-8 relative mx-auto">
           <input
-            v-model="searchQuery"
             type="text"
             placeholder="Search"
             class="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -135,11 +134,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
           <!-- Iterate over filtered programs and use the ProgramCard component -->
-          <ProgramCard
-            v-for="program in searchedAndFilteredPrograms"
-            :key="program.id"
-            :program="program"
-          />
+          <ProgramCard v-for="program in programs" :key="program.id" :program="program" />
         </div>
       </div>
     </section>
@@ -160,128 +155,65 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import ProgramCard from '~/components/ProgramCard.vue';
 import TestimonialCarousel from '~/components/TestimonialCarousel.vue';
 import NewsletterCta from '~/components/NewsletterCta.vue';
 
-// Define a type for a program
 interface Program {
   id: string;
   title: string;
-  description: string;
-  duration: string;
-  level: string;
-  category: string;
   imageUrl: string;
   startDate?: string;
   price?: string;
-  technologies?: string[]; // New optional property
 }
 
-// Static program data (replace with API call in a real app)
 const programs: Program[] = [
   {
     id: 'full-stack-web-dev',
     title: 'Full-Stack Development',
-    description: 'Master front-end and back-end technologies to build modern web applications.',
-    duration: '6 Months',
-    level: 'Beginner to Advanced',
-    category: 'Computing & Dev',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/0f766e?text=Web+Dev',
+    imageUrl: '/dummy-program/program-1.svg',
     startDate: 'November 15, 2024',
     price: 'Rp 2,000,000',
-    technologies: ['< />', 'CMS', 'CSS', 'Js', 'C++', 'PHP', 'HTML'],
   },
   {
-    id: 'data-science',
+    id: 'data-science-ml',
     title: 'Data Science & Machine Learning',
-    description: 'Dive into data analysis, machine learning algorithms, and AI.',
-    duration: '8 Months',
-    level: 'Intermediate',
-    category: 'Data Science',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/065f46?text=Data+Science',
+    imageUrl: '/dummy-program/program-2.svg',
     startDate: 'November 24, 2024',
     price: 'Rp 1,500,000',
-    technologies: ['Python', 'R', 'SQL', 'TensorFlow'],
   },
   {
-    id: 'ui-ux-design',
+    id: 'ui-ux-designer',
     title: 'UI/UX Designer',
-    description: 'Design intuitive and engaging user interfaces and experiences.',
-    duration: '5 Months',
-    level: 'Beginner',
-    category: 'Design',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/1d4ed8?text=UI/UX',
+    imageUrl: '/dummy-program/program-3.svg',
     startDate: 'November 15, 2024',
     price: 'Rp 2,000,000',
-    technologies: ['Figma', 'Sketch', 'Adobe XD'],
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity Analyst',
-    description: 'Protect systems and data from cyber threats and attacks.',
-    duration: '7 Months',
-    level: 'Intermediate',
-    category: 'Cybersecurity',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/9d174d?text=Cybersecurity',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-    technologies: ['Network Security', 'Ethical Hacking', 'Incident Response'],
-  },
-  {
-    id: 'cloud-devops',
-    title: 'Cloud & DevOps Engineering',
-    description: 'Build and deploy scalable applications on cloud platforms.',
-    duration: '7 Months',
-    level: 'Intermediate',
-    category: 'Computing & Dev',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/fbbf24?text=Cloud+DevOps',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-    technologies: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
-  },
-  {
-    id: 'mobile-app-dev',
-    title: 'Mobile App Development',
-    description: 'Create native iOS and Android applications.',
-    duration: '6 Months',
-    level: 'Beginner',
-    category: 'Computing & Dev',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/7c3aed?text=Mobile+Dev',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-    technologies: ['Swift', 'Kotlin', 'React Native'],
   },
   {
     id: 'it-project-management',
     title: 'IT Project Management',
-    description: 'Lead and manage IT projects from conception to completion.',
-    duration: '6 Months',
-    level: 'Intermediate',
-    category: 'Management',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/8b5cf6?text=Project+Mgmt',
+    imageUrl: '/dummy-program/program-4.svg',
     startDate: 'November 15, 2024',
     price: 'Rp 2,000,000',
-    technologies: ['Agile', 'Scrum', 'Jira'],
   },
   {
     id: 'software-testing-qa',
     title: 'Software Testing & Quality Assurance',
-    description: 'Ensure software quality through comprehensive testing methodologies.',
-    duration: '5 Months',
-    level: 'Beginner',
-    category: 'QA',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/10b981?text=Testing+QA',
+    imageUrl: '/dummy-program/program-5.svg',
     startDate: 'November 24, 2024',
     price: 'Rp 1,500,000',
-    technologies: ['Selenium', 'Junit', 'TestRail'],
+  },
+  {
+    id: 'cloud-computing-devops',
+    title: 'Cloud Computing & DevOps',
+    imageUrl: '/dummy-program/program-6.svg',
+    startDate: 'November 15, 2024',
+    price: 'Rp 2,000,000',
   },
 ];
 
-// Testimonial data (reused from program detail page)
 const testimonials = [
   {
     name: 'John Doe',
@@ -299,67 +231,18 @@ const testimonials = [
   },
 ];
 
-// Categories for filtering (still useful if you want to reintroduce category filtering)
-const categories = ref([
-  { name: 'All Programs' },
-  { name: 'Computing & Dev' },
-  { name: 'Cybersecurity' },
-  { name: 'Data Science' },
-  { name: 'Design' },
-  { name: 'Management' },
-  { name: 'QA' },
-]);
-const selectedCategory = ref('All Programs');
-const searchQuery = ref(''); // New reactive property for search query
-
-// Filter programs based on selected category (if still used)
-const filteredPrograms = computed(() => {
-  if (selectedCategory.value === 'All Programs') {
-    return programs;
-  }
-  return programs.filter((program) => program.category === selectedCategory.value);
-});
-
-// New computed property for search and filter combined
-const searchedAndFilteredPrograms = computed(() => {
-  let results = programs; // Start with all programs
-  const query = searchQuery.value.toLowerCase();
-
-  // Apply search filtering
-  if (query) {
-    results = results.filter(
-      (program) =>
-        program.title.toLowerCase().includes(query) ||
-        program.description.toLowerCase().includes(query) ||
-        program.category.toLowerCase().includes(query) ||
-        (program.technologies &&
-          program.technologies.some((tech) => tech.toLowerCase().includes(query))),
-    );
-  }
-
-  // Apply category filtering (if you want to keep this functionality)
-  if (selectedCategory.value !== 'All Programs') {
-    results = results.filter((program) => program.category === selectedCategory.value);
-  }
-
-  return results;
-});
-
-// Set page metadata
 useHead({
-  title: 'Programs - Nuxt Boilerplate', // Updated title
+  title: 'Programs',
   meta: [{ name: 'description', content: 'Explore our wide range of IT bootcamp programs.' }],
 });
 </script>
 
 <style scoped>
-/* Scoped styles can be added here if needed */
-/* Hide scrollbar for category tags but allow scrolling */
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 </style>

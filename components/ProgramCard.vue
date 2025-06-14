@@ -12,11 +12,19 @@
       />
     </div>
     <div class="p-6">
-      <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ program.title }}</h3>
-      <div class="flex items-center text-sm text-gray-500 mb-2">
+      <h3
+        class="font-poppins text-base sm:text-lg md:text-[18px] leading-none tracking-normal font-semibold text-gray-900 mb-2"
+      >
+        {{ program.title }}
+      </h3>
+      <div
+        class="flex items-center text-sm mb-2 font-poppins text-base leading-none tracking-normal font-normal text-gray-500"
+      >
         <span class="mr-2">🗓️</span> {{ program.startDate || 'N/A' }}
       </div>
-      <div class="flex items-center text-sm text-gray-500 mb-4">
+      <div
+        class="flex items-center text-sm mb-4 font-poppins text-base leading-none tracking-normal font-semibold text-gray-500"
+      >
         <span class="mr-2">💰</span> {{ program.price || 'N/A' }}
       </div>
     </div>

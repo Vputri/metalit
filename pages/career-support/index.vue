@@ -159,7 +159,7 @@ const jobVacancies = ref<JobVacancy[]>([
 
 // Set page metadata
 useHead({
-  title: 'Career Support - Nuxt Boilerplate',
+  title: 'Career Support',
   meta: [{ name: 'description', content: 'Explore job vacancies and career support resources.' }],
 });
 </script>

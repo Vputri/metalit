@@ -11,14 +11,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Use Inter font by default
-        poppins: ['Poppins', 'sans-serif'], 
+        sans: ['Inter', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
-        primary: '#3b82f6', // Example primary color
-        secondary: '#6b7280', // Example secondary color
-      }
+        primary: '#3b82f6',
+        secondary: '#6b7280',
+      },
     },
   },
   plugins: [],
-}
+};

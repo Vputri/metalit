@@ -10,7 +10,7 @@
           <select
             id="selectProgram"
             v-model="formData.program"
-            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             required
           >
             <option value="" disabled>Select Program</option>
@@ -26,7 +26,7 @@
           <select
             id="selectLocation"
             v-model="formData.location"
-            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             required
           >
             <option value="" disabled>Select Location</option>
@@ -42,7 +42,7 @@
           <select
             id="selectBatch"
             v-model="formData.batch"
-            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             required
           >
             <option value="" disabled>Select Batch</option>
@@ -65,7 +65,7 @@
               id="firstName"
               v-model="formData.firstName"
               type="text"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               placeholder="Enter first name"
               required
             />
@@ -78,7 +78,7 @@
               id="lastName"
               v-model="formData.lastName"
               type="text"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               placeholder="Enter last name"
               required
             />
@@ -89,7 +89,7 @@
               id="email"
               v-model="formData.email"
               type="email"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               placeholder="Enter email address"
               required
             />
@@ -108,7 +108,7 @@
                 id="mobilePhone"
                 v-model="formData.phoneNumber"
                 type="tel"
-                class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-3"
+                class="rounded-none rounded-r-lg border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-3 bg-white"
                 placeholder="Phone number"
                 required
               />
@@ -150,7 +150,7 @@
             <select
               id="lastEducation"
               v-model="formData.lastEducation"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               required
             >
               <option value="" disabled>Select...</option>
@@ -168,7 +168,7 @@
             <select
               id="cityOfDomicile"
               v-model="formData.cityOfDomicile"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               required
             >
               <option value="" disabled>Select...</option>
@@ -186,7 +186,7 @@
               id="completeAddress"
               v-model="formData.completeAddress"
               rows="3"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               placeholder="Enter complete address"
               required
             ></textarea>
@@ -198,7 +198,7 @@
             <select
               id="howToFind"
               v-model="formData.howToFind"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               required
             >
               <option value="" disabled>Select...</option>
@@ -216,7 +216,7 @@
             <select
               id="motivation"
               v-model="formData.motivation"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               required
             >
               <option value="" disabled>Select...</option>
@@ -265,7 +265,7 @@
           id="referralCode"
           v-model="formData.referralCode"
           type="text"
-          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           placeholder="Enter referral code (if there are)"
         />
       </div>
@@ -316,7 +316,10 @@ const programs = [
 const allBatches = {
   'it-project-management': ['Batch A - Nov 2024', 'Batch B - Jan 2025'],
   'full-stack-development': ['Batch 1 - Oct 2024', 'Batch 2 - Dec 2024'],
-  // Add more batches for other programs
+  'data-science-ml': ['Batch X - Nov 2024', 'Batch Y - Feb 2025'],
+  'ui-ux-designer': ['Batch UI1 - Dec 2024', 'Batch UI2 - Mar 2025'],
+  'software-testing-qa': ['Batch QA1 - Jan 2025', 'Batch QA2 - Apr 2025'],
+  'cloud-computing-devops': ['Batch C1 - Feb 2025', 'Batch C2 - May 2025'],
 };
 
 const availableBatches = computed(() => {

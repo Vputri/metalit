@@ -43,6 +43,8 @@
         </div>
       </div>
     </section>
+
+    <!-- About Metalit Section: Introduces the organization and its mission -->
     <section
       class="relative bg-blue-100 py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-cover bg-center bg-no-repeat"
       :style="{ backgroundImage: `url(${bgAboutImage})` }"
@@ -62,18 +64,17 @@
         </p>
         <NuxtLink
           to="/about"
-          class="inline-block bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl transform hover:scale-105 font-poppins font-semibold text-base leading-none tracking-normal"
+          class="inline-block bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-lg shadow-xl transform hover:scale-105"
         >
           Learn More &rarr;
         </NuxtLink>
       </div>
     </section>
 
-    <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <!-- Features Section: Highlights key benefits of the bootcamp -->
+    <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div class="container mx-auto text-center">
-        <h2
-          class="font-poppins text-2xl sm:text-3xl md:text-[25px] leading-normal sm:leading-normal md:leading-[35px] font-semibold tracking-normal text-gray-900 mb-12 rounded-md text-center"
-        >
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 rounded-md">
           Why Our Bootcamp Stands Out
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -81,29 +82,34 @@
             v-for="feature in features"
             :key="feature.title"
             :title="feature.title"
-            :iconSrc="feature.iconSrc"
             :description="feature.description"
+            :icon-src="feature.icon"
           />
         </div>
       </div>
     </section>
 
+    <!-- Choose Your Program Section: Showcases featured programs -->
     <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="container mx-auto">
         <div
           class="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12 text-center md:text-left"
         >
           <div class="mb-6 md:mb-0">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 rounded-md mb-2">
+            <h2
+              class="font-poppins text-2xl sm:text-3xl md:text-[25px] leading-normal sm:leading-normal md:leading-[35px] font-semibold tracking-normal text-gray-900 rounded-md mb-2"
+            >
               Choose the Right Path for You
             </h2>
-            <p class="text-lg sm:text-xl text-gray-700">
+            <p
+              class="font-poppins text-base sm:text-lg md:text-[18px] leading-none tracking-normal font-normal text-gray-700"
+            >
               Choose Your Program and Start Your Journey Today!
             </p>
           </div>
           <NuxtLink
             to="/programs"
-            class="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-bold text-base sm:text-lg shadow-md"
+            class="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-md font-poppins font-semibold text-base sm:text-lg md:text-[18px] leading-none tracking-normal"
           >
             Explore &rarr;
           </NuxtLink>
@@ -114,10 +120,12 @@
       </div>
     </section>
 
+    <!-- Testimonials Section: Displays feedback from graduates -->
     <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
       <TestimonialCarousel :testimonials="testimonials" />
     </section>
 
+    <!-- Registration Form Section: Primary call to action for users to sign up -->
     <section id="registration-form" class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="container mx-auto max-w-4xl">
         <h2
@@ -129,17 +137,18 @@
       </div>
     </section>
 
+    <!-- Newsletter Signup Section: Encourages users to subscribe for updates -->
     <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <NewsletterCta />
     </section>
 
+    <!-- Footer Component: Contains copyright, links, and contact info -->
     <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
 // --- Imports ---
-import bgAboutImage from '~/assets/img/bg-about.png';
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import FeatureCard from '~/components/FeatureCard.vue';
@@ -148,146 +157,13 @@ import TestimonialCarousel from '~/components/TestimonialCarousel.vue';
 import RegistrationForm from '~/components/RegistrationForm.vue';
 import NewsletterCta from '~/components/NewsletterCta.vue';
 
-// --- Data Types (Interfaces) ---
-interface Feature {
-  title: string;
-  description: string;
-  iconSrc: string;
-}
+import bgAboutImage from '~/assets/img/bg-about.png';
+import { features } from '~/data/features';
+import { featuredPrograms } from '~/data/program';
+import { testimonials } from '~/data/testimonial';
 
-interface Program {
-  id: string;
-  title: string;
-  description: string;
-  duration: string;
-  level: string;
-  category: string;
-  imageUrl: string;
-  startDate: string;
-  price: string;
-}
-
-interface Testimonial {
-  name: string;
-  role: string;
-  quote: string;
-  imageUrl: string;
-}
-
-// --- Component Data ---
-const features: Feature[] = [
-  {
-    title: 'Expert Mentorship',
-    description:
-      'Learn from seasoned professionals with extensive industry experience who guide you every step of the way.',
-    iconSrc: '/dummy-data/icon-feature-1.svg',
-  },
-  {
-    title: 'Job-Ready Skills',
-    description:
-      "Gain in-demand skills in programming, data analysis, and more, tailored to today's tech job market.",
-    iconSrc: '/dummy-data/icon-feature-1.svg',
-  },
-  {
-    title: 'Affordable and Accessible Education',
-    description:
-      'Our bootcamp offers competitive pricing and financing options to make quality tech education accessible to everyone.',
-    iconSrc: '/dummy-data/icon-feature-3.svg',
-  },
-  {
-    title: 'Career-Focused Projects',
-    description:
-      'Work on real-world projects that showcase your skills in a practical relatable way.',
-    iconSrc: '/dummy-data/icon-feature-4.svg',
-  },
-];
-
-const featuredPrograms: Program[] = [
-  {
-    id: 'full-stack-development',
-    title: 'Full-Stack Development',
-    description: 'Build robust web applications with front-end and back-end expertise.',
-    duration: '6 Months',
-    level: 'Beginner to Advanced',
-    category: 'Computing & Dev',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/0f766e?text=Web+Dev',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-  },
-  {
-    id: 'data-science-ml',
-    title: 'Data Science & Machine Learning',
-    description: 'Master data analysis, machine learning, and AI concepts.',
-    duration: '8 Months',
-    level: 'Intermediate',
-    category: 'Data Science',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/065f46?text=Data+Science',
-    startDate: 'November 24, 2024',
-    price: 'Rp 1,500,000',
-  },
-  {
-    id: 'ui-ux-designer',
-    title: 'UI/UX Designer',
-    description: 'Create intuitive and visually appealing user interfaces.',
-    duration: '5 Months',
-    level: 'Beginner',
-    category: 'Design',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/1d4ed8?text=UI/UX',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-  },
-  {
-    id: 'it-project-management',
-    title: 'IT Project Management',
-    description: 'Lead and manage IT projects from conception to completion.',
-    duration: '6 Months',
-    level: 'Intermediate',
-    category: 'Management',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/8b5cf6?text=Project+Mgmt',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-  },
-  {
-    id: 'software-testing-qa',
-    title: 'Software Testing & Quality Assurance',
-    description: 'Ensure software quality through comprehensive testing methodologies.',
-    duration: '5 Months',
-    level: 'Beginner',
-    category: 'QA',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/10b981?text=Testing+QA',
-    startDate: 'November 24, 2024',
-    price: 'Rp 1,500,000',
-  },
-  {
-    id: 'cloud-computing-devops',
-    title: 'Cloud Computing & DevOps',
-    description: 'Master cloud platforms and DevOps practices for scalable solutions.',
-    duration: '7 Months',
-    level: 'Intermediate',
-    category: 'DevOps',
-    imageUrl: 'https://placehold.co/600x400/f0f9ff/fbbf24?text=Cloud+DevOps',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-  },
-];
-
-const testimonials: Testimonial[] = [
-  {
-    name: 'Jacqueline Wright',
-    role: 'Quality Assurance At Tokopedia',
-    quote:
-      'Lorem ipsum dolor sit amet consectetur. Condimentum eget vitae ligula sed urna sit sagittis interdum a. Blandit mattis mattis lobortis orci.',
-    imageUrl: 'https://placehold.co/60x60/d1d5db/4b5563?text=JW',
-  },
-  {
-    name: 'Jacqueline Wright',
-    role: 'UI/UX Di Eureka Bookhouse',
-    quote:
-      'Lorem ipsum dolor sit amet consectetur. Condimentum eget vitae ligula sed urna sit sagittis interdum a. Blandit mattis mattis lobortis orci.',
-    imageUrl: 'https://placehold.co/60x60/d1d5db/4b5563?text=JW',
-  },
-];
-
+// --- Page Metadata ---
+// Configures head properties like title and meta description for SEO and browser tabs.
 useHead({
   title: 'Home Page - Metalit IT Bootcamp',
   meta: [

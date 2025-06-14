@@ -1,11 +1,8 @@
 <template>
   <div class="min-h-screen bg-white text-gray-800 font-sans">
-    <!-- Header Component -->
     <Header />
 
     <div class="pt-[72px]"></div>
-
-    <!-- Conditionally render content if program data is available -->
     <template v-if="program">
       <!-- Hero Section -->
       <section class="relative bg-white text-gray-800 py-20 px-4 md:px-8 overflow-hidden">
@@ -36,7 +33,6 @@
             </div>
           </div>
           <div class="md:w-1/2 flex justify-center md:justify-end">
-            <!-- Image from image_a79fb4.jpg -->
             <img
               src="https://placehold.co/600x400/D1D5DB/1F2937?text=UI/UX+Design+Illustration"
               alt="Program Illustration"
@@ -48,7 +44,6 @@
       </section>
 
       <div class="container mx-auto flex flex-col lg:flex-row gap-8 py-8 px-4 md:px-8">
-        <!-- Sidebar Navigation (Updated) -->
         <aside class="lg:w-1/4 bg-white p-6 rounded-lg shadow-md sticky top-[92px] h-fit">
           <h3 class="text-2xl font-bold text-gray-900 mb-6 rounded-md">{{ program.title }}</h3>
           <nav>
@@ -275,7 +270,8 @@
                       stroke-linejoin="round"
                       stroke-width="2"
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    ></path></svg
+                    ></path>
+                  </svg>
                   >3x Meetings / Week
                 </p>
                 <p class="flex items-center">
@@ -297,7 +293,8 @@
                       stroke-linejoin="round"
                       stroke-width="2"
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    ></path></svg
+                    ></path>
+                  </svg>
                   >Online
                 </p>
                 <p class="flex items-center">
@@ -313,7 +310,8 @@
                       stroke-linejoin="round"
                       stroke-width="2"
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path></svg
+                    ></path>
+                  </svg>
                   >19.00 - 22.00 WIB
                 </p>
               </div>
@@ -479,232 +477,18 @@ import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
-import InstructorCard from '~/components/InstructorCard.vue';
 import TestimonialCarousel from '~/components/TestimonialCarousel.vue';
-
-// Define Program interface
-interface Program {
-  id: string;
-  title: string;
-  description: string;
-  price: string;
-  duration: string;
-  level: string;
-  category: string;
-  imageUrl: string;
-  skills: string[];
-  curriculum: {
-    title: string;
-    description: string;
-    topics: string[];
-    isOpen: boolean; // Added for expand/collapse functionality
-  }[];
-  tools?: string[]; // New optional property for tools
-  scheduleDetails?: string[]; // Optional schedule details
-}
-
-// Define Instructor interface
-interface Instructor {
-  name: string;
-  title: string;
-  imageUrl: string;
-  role: string;
-  bio: string;
-  linkedinUrl: string; // Added linkedinUrl
-}
-
-// Dummy data for programs
-const programsData: Program[] = [
-  {
-    id: 'ui-ux-design',
-    title: 'Bootcamp - UI/UX Design',
-    description:
-      'An intensive 16-week learning program guided by experienced industry professionals, designed to equip you with essential skills and prepare you for a thriving career as a UI/UX Designer.',
-    price: 'Rp 2,000,000',
-    duration: '5 Months',
-    level: 'Beginner',
-    category: 'Design',
-    imageUrl: 'https://placehold.co/600x400/D1D5DB/1F2937?text=UI/UX+Design',
-    skills: [
-      'User Research & Persona Development',
-      'Wireframing & Prototyping',
-      'Usability Testing',
-      'Information Architecture',
-      'Visual Design & Branding',
-      'Figma & Sketch Proficiency',
-      'Design Systems',
-      'Interaction Design',
-    ],
-    curriculum: [
-      {
-        title: 'Introduction to UI/UX Design',
-        description:
-          'Fundamentals of UI/UX design, design thinking, and user-centered design principles.',
-        topics: ['What is UI/UX?', 'Design Thinking Process', 'User-Centered Design'],
-        isOpen: false,
-      },
-      {
-        title: 'User Research & Analysis',
-        description:
-          'Techniques for conducting user research, creating personas, and user journey mapping.',
-        topics: ['User Interviews', 'Surveys', 'Persona Creation', 'User Journey Maps'],
-        isOpen: false,
-      },
-      {
-        title: 'UI Design & Prototyping',
-        description:
-          'Hands-on practice with wireframing and prototyping tools to build interactive designs.',
-        topics: ['Low-Fidelity Wireframes', 'High-Fidelity Prototypes', 'Figma Basics'],
-        isOpen: false,
-      },
-      {
-        title: 'Research & Usability Testing',
-        description: 'Learn to validate designs through various testing methods.',
-        topics: ['Usability Heuristics', 'A/B Testing', 'User Feedback Analysis'],
-        isOpen: false,
-      },
-      {
-        title: 'UI Component Development',
-        description: 'Focus on building reusable and accessible UI components.',
-        topics: ['Design Systems', 'Component Libraries', 'Accessibility Guidelines'],
-        isOpen: false,
-      },
-    ],
-    tools: ['Figma', 'Adobe XD', 'Sketch', 'Miro'], // Tools from the image
-    scheduleDetails: [
-      'Flexible learning hours (self-paced with live sessions)',
-      'Weekly live Q&A sessions with instructors',
-      'Project deadlines every two weeks',
-    ],
-  },
-  {
-    id: 'full-stack-web-dev',
-    title: 'Full-Stack Web Development',
-    description:
-      'A comprehensive bootcamp to become a proficient full-stack developer, covering front-end and back-end technologies.',
-    price: 'Rp 4,500,000',
-    duration: '6 Months',
-    level: 'Beginner to Advanced',
-    category: 'Computing & Dev',
-    imageUrl: 'https://placehold.co/600x400/D1D5DB/1F2937?text=Full-Stack+Web+Dev',
-    skills: [
-      'HTML, CSS, JavaScript',
-      'React.js / Vue.js',
-      'Node.js / Python (Django/Flask)',
-      'Database Management (SQL/NoSQL)',
-      'API Development',
-      'Version Control (Git)',
-    ],
-    curriculum: [
-      {
-        title: 'Front-End Fundamentals',
-        description: 'Building interactive user interfaces.',
-        topics: ['HTML5', 'CSS3 (Tailwind CSS)', 'JavaScript ES6+', 'DOM Manipulation'],
-        isOpen: false,
-      },
-      {
-        title: 'Modern Front-End Frameworks',
-        description: 'In-depth look into React.js or Vue.js.',
-        topics: ['Components', 'State Management', 'Routing', 'API Integration'],
-        isOpen: false,
-      },
-    ],
-    tools: ['VS Code', 'Git', 'Node.js', 'React', 'Vue', 'MongoDB'],
-  },
-  {
-    id: 'data-science-ml',
-    title: 'Data Science & Machine Learning',
-    description:
-      'Master data analysis, machine learning algorithms, and artificial intelligence concepts to solve real-world problems.',
-    price: 'Rp 3,800,000',
-    duration: '8 Months',
-    level: 'Intermediate',
-    category: 'Data Science',
-    imageUrl: 'https://placehold.co/600x400/D1D5DB/1F2937?text=Data+Science+ML',
-    skills: [
-      'Python for Data Science',
-      'Data Cleaning & Preprocessing',
-      'Statistical Analysis',
-      'Machine Learning (Supervised/Unsupervised)',
-      'Deep Learning Fundamentals',
-      'Data Visualization',
-      'SQL for Data Analysis',
-    ],
-    curriculum: [
-      {
-        title: 'Python & Data Fundamentals',
-        description: 'Introduction to Python for data science and basic data structures.',
-        topics: ['Python Basics', 'Numpy', 'Pandas', 'Data Structures'],
-        isOpen: false,
-      },
-      {
-        title: 'Statistical Foundations',
-        description: 'Understanding statistical concepts crucial for data analysis.',
-        topics: ['Probability', 'Hypothesis Testing', 'Regression Analysis'],
-        isOpen: false,
-      },
-    ],
-    tools: ['Python', 'Jupyter', 'TensorFlow', 'Scikit-learn', 'SQL'],
-  },
-];
-
-// Instructor data
-const instructors: Instructor[] = [
-  {
-    name: 'Natasha Aurelia',
-    title: 'Tech Lead UI/UX Design EY',
-    role: 'Lead Instructor',
-    bio: 'Natasha leads design teams and focuses on user-centric product development.',
-    imageUrl: 'https://placehold.co/80x80/d1d5db/4b5563?text=NA',
-    linkedinUrl: 'https://linkedin.com/in/natashaaurelia',
-  },
-  {
-    name: 'Mike Darsono',
-    title: 'Lead UI/UX Design Traveloka',
-    role: 'Technical Instructor',
-    bio: 'Mike is a seasoned developer with expertise in scalable web architectures.',
-    imageUrl: 'https://placehold.co/80x80/d1d5db/4b5563?text=MD',
-    linkedinUrl: 'https://linkedin.com/in/mikedarsono',
-  },
-  {
-    name: 'Sandra Willson',
-    title: 'Senior UI/UX Design Deloitte',
-    role: 'UX Specialist',
-    bio: 'Sandra has a passion for uncovering user insights and translating them into impactful designs.',
-    imageUrl: 'https://placehold.co/80x80/d1d5db/4b5563?text=SW',
-    linkedinUrl: 'https://linkedin.com/in/sandrawillson',
-  },
-];
-
-// Testimonial data (Updated with LinkedIn URLs as per TestimonialCard)
-const testimonials = [
-  {
-    name: 'Jacqueline Wright',
-    role: 'Quality Assurance At Tokopedia',
-    quote:
-      'Lorem ipsum dolor sit amet consectetur. Condimentum eget vitae ligula sed urna sit sagittis interdum a. Blandit mattis mattis lobortis orci.',
-    imageUrl: 'https://placehold.co/60x60/d1d5db/4b5563?text=JW',
-    linkedinUrl: 'https://linkedin.com/in/jacquelinewright',
-  },
-  {
-    name: 'Jacqueline Wright',
-    role: 'UI/UX Di Eureka Bookhouse',
-    quote:
-      'Lorem ipsum dolor sit amet consectetur. Condimentum eget vitae ligula sed urna sit sagittis interdum a. Blandit mattis mattis lobortis orci.',
-    imageUrl: 'https://placehold.co/60x60/d1d5db/4b5563?text=JW',
-    linkedinUrl: 'https://linkedin.com/in/jacquelinewright',
-  },
-];
+import { testimonials } from '~/data/testimonial';
+import { programsData, type Program } from '~/data/programs';
+import { instructors } from '~/data/instructor';
 
 const route = useRoute();
 const programSlug = route.params.slug as string;
 
 const program = ref<Program | undefined>(programsData.find((p) => p.id === programSlug));
 
-// Reactive variable to track the active section in the sidebar
-const activeSection = ref('overview'); // Default to 'overview'
+const activeSection = ref('overview');
 
-// Function to set the active section and scroll to it
 const setActiveSection = (sectionId: string) => {
   activeSection.value = sectionId;
   const element = document.getElementById(sectionId);
@@ -713,7 +497,6 @@ const setActiveSection = (sectionId: string) => {
   }
 };
 
-// Function to toggle module visibility
 const toggleModule = (index: number) => {
   if (program.value && program.value.curriculum[index]) {
     program.value.curriculum[index].isOpen = !program.value.curriculum[index].isOpen;
@@ -723,11 +506,8 @@ const toggleModule = (index: number) => {
 onMounted(() => {
   if (!program.value) {
     console.error(`Program with slug "${programSlug}" not found.`);
-    // Optionally redirect:
-    // navigateTo('/programs', { redirectCode: 302 });
   }
 
-  // Optional: Implement Intersection Observer for automatic active section highlighting on scroll
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -737,23 +517,19 @@ onMounted(() => {
       });
     },
     {
-      root: null, // viewport
-      rootMargin: '-50% 0px -50% 0px', // When section is in the middle of the viewport
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
       threshold: 0,
     },
   );
 
-  // Observe all sections with IDs in the sidebar
   document.querySelectorAll('main section[id]').forEach((section) => {
     observer.observe(section);
   });
 });
 
-// Update page metadata dynamically
 useHead({
-  title: program.value
-    ? `${program.value.title} - Nuxt Boilerplate`
-    : 'Program Details - Nuxt Boilerplate',
+  title: program.value ? `${program.value.title}` : 'Program Details',
   meta: [
     {
       name: 'description',
@@ -765,6 +541,4 @@ useHead({
 });
 </script>
 
-<style scoped>
-/* Add any specific styles for this page here */
-</style>
+<style scoped></style>
