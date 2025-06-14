@@ -31,15 +31,19 @@
       </svg>
     </div>
     <div class="container mx-auto text-center relative z-10">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 rounded-md">
+      <h2
+        class="font-poppins text-2xl sm:text-3xl md:text-[30px] leading-none tracking-[-1px] capitalize font-bold mb-6 rounded-md text-center"
+      >
         Stay Connected And Never Miss An Update
       </h2>
-      <p class="text-lg md:text-xl mb-8 opacity-90 rounded-md max-w-3xl mx-auto">
+      <p
+        class="font-poppins font-normal text-base sm:text-lg md:text-[18px] leading-none tracking-normal mb-8 opacity-90 rounded-md max-w-3xl mx-auto text-center"
+      >
         Be the first to know about our latest programs, exclusive discounts, and free resources.
         Sign up today and start your journey toward a brighter tech future!
       </p>
       <button
-        class="bg-blue-900 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-800 transition duration-300"
+        class="bg-[#00305E] text-white py-3 px-8 rounded-full shadow-lg hover:bg-blue-800 transition duration-300 font-poppins font-normal text-base leading-[20px] tracking-normal capitalize"
       >
         SUBSCRIBE
       </button>

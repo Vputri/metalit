@@ -1,8 +1,8 @@
 <template>
   <header class="bg-white shadow-md py-4 px-6 fixed top-0 left-0 w-full z-50">
-    <nav class="container mx-auto flex justify-between items-center">
+    <nav class="container mx-auto max-w-[90%] flex justify-between items-center">
       <NuxtLink to="/" class="flex items-center">
-        <img src="/assets/img/logo.png" alt="metalit logo" class="h-8 mr-2" />
+        <img src="/assets/img/logo.png" alt="metalit logo" class="h-10 mr-2" />
       </NuxtLink>
 
       <button
@@ -120,7 +120,8 @@
           Home
         </NuxtLink>
         <NuxtLink
-          to="/programs" :class="{
+          to="/programs"
+          :class="{
             'text-blue-700 font-semibold': isActive('/programs') || isActive('/programs/', true),
           }"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"

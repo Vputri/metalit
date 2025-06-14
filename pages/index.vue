@@ -8,7 +8,7 @@
       class="relative bg-white text-gray-800 py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div
-        class="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10"
+        class="container mx-auto max-w-[90%] flex flex-col md:flex-row items-center justify-between relative z-10"
       >
         <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-16">
           <h1
@@ -73,7 +73,7 @@
 
     <!-- Features Section: Highlights key benefits of the bootcamp -->
     <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div class="container mx-auto text-center">
+      <div class="container mx-auto max-w-[90%] text-center">
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 rounded-md">
           Why Our Bootcamp Stands Out
         </h2>
@@ -91,7 +91,7 @@
 
     <!-- Choose Your Program Section: Showcases featured programs -->
     <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div class="container mx-auto">
+      <div class="container mx-auto max-w-[90%]">
         <div
           class="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12 text-center md:text-left"
         >
@@ -127,12 +127,7 @@
 
     <!-- Registration Form Section: Primary call to action for users to sign up -->
     <section id="registration-form" class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div class="container mx-auto max-w-4xl">
-        <h2
-          class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 md:mb-12 text-center rounded-md"
-        >
-          Registration Form
-        </h2>
+      <div class="container mx-auto max-w-[90%]">
         <RegistrationForm />
       </div>
     </section>

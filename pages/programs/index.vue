@@ -5,13 +5,12 @@
 
     <div class="pt-[72px]"></div>
 
-    <!-- Hero Section for Programs Page (Updated) -->
+    <!-- Hero Section for Programs Page -->
     <section class="relative bg-white text-gray-800 py-20 px-4 md:px-8 overflow-hidden">
       <div
         class="container mx-auto flex flex-col md:flex-row items-center justify-between z-10 relative"
       >
         <div class="md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
-          <!-- Illustration for programs page from image_d9fa2d.png -->
           <img
             src="https://placehold.co/500x400/D1D5DB/1F2937?text=Programming+Illustration"
             alt="Programming Illustration"
@@ -133,18 +132,17 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-          <!-- Iterate over filtered programs and use the ProgramCard component -->
           <ProgramCard v-for="program in programs" :key="program.id" :program="program" />
         </div>
       </div>
     </section>
 
-    <!-- What Our Graduates Say (Testimonials) - Replaced with TestimonialCarousel -->
+    <!-- What Our Graduates Say (Testimonials) -->
     <section class="py-16 px-4 md:px-8 bg-white">
       <TestimonialCarousel :testimonials="testimonials" />
     </section>
 
-    <!-- Newsletter Signup Section (Now using the reusable component) -->
+    <!-- Newsletter Signup Section -->
     <section class="py-16 px-4 md:px-8">
       <NewsletterCta />
     </section>
