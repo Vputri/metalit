@@ -75,12 +75,12 @@
       <button
         v-for="(testimonial, index) in props.testimonials"
         :key="'indicator-' + index"
-        @click="goToTestimonial(index)"
         :class="[
           'w-3 h-3 rounded-full transition-colors duration-300',
           index === currentIndex ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400',
         ]"
         :aria-label="`Go to testimonial ${index + 1}`"
+        @click="goToTestimonial(index)"
       ></button>
     </div>
   </div>

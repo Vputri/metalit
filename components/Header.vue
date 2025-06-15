@@ -94,12 +94,12 @@
 
       <div class="hidden lg:flex space-x-4">
         <button
-          class="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition duration-300 font-semibold"
+          class="px-6 py-2 border border-[#0F5DA9] text-[#0F5DA9] rounded-lg hover:bg-blue-50 transition duration-300 font-semibold"
         >
           Login
         </button>
         <button
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 font-semibold"
+          class="px-6 py-2 bg-[#0F5DA9] text-white rounded-lg hover:bg-blue-700 transition duration-300 font-semibold"
         >
           Registrasi
         </button>
