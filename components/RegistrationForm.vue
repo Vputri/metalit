@@ -156,43 +156,29 @@
               Gender
             </label>
             <div class="flex items-center space-x-4">
-              <label class="inline-flex items-center cursor-pointer">
+              <label class="inline-flex items-center">
                 <input
                   v-model="formData.gender"
                   type="radio"
                   value="male"
+                  class="form-radio text-blue-600 h-5 w-5 bg-white"
                   name="gender"
-                  class="sr-only peer"
                   required
                 />
-                <div
-                  class="w-5 h-5 border border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-blue-600 peer-checked:border-blue-600 transition-all duration-200"
-                >
-                  <div
-                    class="w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity duration-200"
-                  ></div>
-                </div>
                 <span
                   class="ml-2 text-gray-700 font-poppins font-normal text-base leading-normal tracking-normal"
                   >Male</span
                 >
               </label>
-              <label class="inline-flex items-center cursor-pointer">
+              <label class="inline-flex items-center">
                 <input
                   v-model="formData.gender"
                   type="radio"
                   value="female"
+                  class="form-radio text-blue-600 h-5 w-5 bg-white"
                   name="gender"
-                  class="sr-only peer"
                   required
                 />
-                <div
-                  class="w-5 h-5 border border-gray-400 rounded-full flex items-center justify-center peer-checked:bg-blue-600 peer-checked:border-blue-600 transition-all duration-200"
-                >
-                  <div
-                    class="w-2.5 h-2.5 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity duration-200"
-                  ></div>
-                </div>
                 <span
                   class="ml-2 text-gray-700 font-poppins font-normal text-base leading-normal tracking-normal"
                   >Female</span
@@ -371,7 +357,7 @@
           id="agreeTerms"
           v-model="formData.agreeTerms"
           type="checkbox"
-          class="form-checkbox h-5 w-5 text-blue-600 rounded mt-1"
+          class="form-checkbox h-5 w-5 text-blue-600 rounded mt-1 bg-white"
           required
         />
         <label
