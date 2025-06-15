@@ -1,84 +1,79 @@
 <template>
   <div class="min-h-screen bg-white text-gray-800 font-sans">
-    <!-- Header Component -->
     <Header />
-
     <div class="pt-[72px]"></div>
 
-    <!-- Hero Section for Programs Page -->
-    <section class="relative bg-white text-gray-800 py-20 px-4 md:px-8 overflow-hidden">
+    <section class="bg-white md:py-20 py:10 px-4 md:px-10">
       <div
-        class="container mx-auto flex flex-col md:flex-row items-center justify-between z-10 relative"
+        class="container mx-auto max-w-[90%] flex flex-col md:flex-row items-center justify-between md:gap-x-16"
       >
-        <div class="md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
+        <div class="md:w-[30%] flex justify-center md:justify-start mb-10 md:mb-0">
           <img
-            src="https://placehold.co/500x400/D1D5DB/1F2937?text=Programming+Illustration"
-            alt="Programming Illustration"
-            class="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-lg transition duration-500 hover:scale-105"
-            onerror="this.onerror=null;this.src='https://placehold.co/500x400/cccccc/333333?text=Image+Missing';"
+            src="/assets/img/hero-icon-program.png"
+            alt="API Illustration"
+            class="max-w-sm md:max-w-md lg:max-w-lg h-auto"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=Image';"
           />
         </div>
-        <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 order-1 md:order-2 md:pl-16">
-          <p class="text-blue-700 font-bold text-lg mb-2">Programs</p>
+
+        <div class="w-full md:w-[70%]">
+          <p
+            class="font-poppins font-medium text-[1.125rem] leading-none tracking-normal text-[#0F5DA9] inline-block py-2 rounded-md mb-2"
+          >
+            Programs
+          </p>
           <h1
-            class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 rounded-md text-gray-900"
+            class="font-poppins font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[1.875rem] leading-snug tracking-normal text-black mb-4"
           >
             Master In-Demand Tech Skills and Build Your Future Today
           </h1>
-          <p class="text-lg md:text-xl font-light mb-8 opacity-90 text-gray-700">
+          <p
+            class="font-poppins font-normal text-base leading-[30px] tracking-normal text-[#262626] mb-8 opacity-90"
+          >
             Discover a range of specialized programs designed to help you master in-demand tech
             skills and launch a successful career in the industry. Choose the path that suits your
             passion and career goals:
           </p>
-          <div class="flex items-center justify-center md:justify-start gap-4">
+
+          <div class="flex items-center gap-4 justify-center md:justify-start">
             <button
-              class="bg-gray-200 text-gray-700 rounded-full p-2 hover:bg-gray-300 transition duration-300"
+              class="bg-[#0F5DA9] text-white p-2 rounded-full hover:bg-blue-800"
+              @click="scrollLeft"
             >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M15 19l-7-7 7-7"
-                ></path>
+                />
               </svg>
             </button>
-            <div class="flex space-x-2 overflow-x-auto no-scrollbar">
-              <span
-                class="bg-blue-100 text-blue-700 font-medium py-2 px-6 rounded-full whitespace-nowrap"
-                >Web Development</span
-              >
-              <span
-                class="bg-gray-100 text-gray-700 font-medium py-2 px-6 rounded-full whitespace-nowrap"
-                >Data Science & Analytics</span
-              >
-              <span
-                class="bg-gray-100 text-gray-700 font-medium py-2 px-6 rounded-full whitespace-nowrap"
-                >Mobile App Development</span
-              >
-            </div>
-            <button
-              class="bg-gray-200 text-gray-700 rounded-full p-2 hover:bg-gray-300 transition duration-300"
+
+            <div
+              ref="scrollContainer"
+              class="flex overflow-x-auto space-x-4 no-scrollbar scroll-smooth"
             >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <div
+                v-for="(category, index) in categories"
+                :key="index"
+                class="flex items-center whitespace-nowrap px-5 py-2 rounded-lg bg-gray-100 text-blue-700 font-medium text-sm cursor-pointer hover:bg-blue-100"
               >
+                {{ category }}
+              </div>
+            </div>
+
+            <button
+              class="bg-[#0F5DA9] text-white p-2 rounded-full hover:bg-blue-800"
+              @click="scrollRight"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M9 5l7 7-7 7"
-                ></path>
+                />
               </svg>
             </button>
           </div>
@@ -86,31 +81,36 @@
       </div>
     </section>
 
-    <!-- Programs Grid Section -->
-    <section class="py-16 px-4 md:px-8 bg-gray-50">
+    <section class="py-16 px-4 md:px-8 bg-white">
       <div class="container mx-auto">
         <div class="flex justify-between items-center mb-12">
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 rounded-md mb-2">
+            <h2
+              class="font-poppins font-semibold text-[1.5625rem] leading-[35px] tracking-normal text-[#262626] mb-2"
+              :class="{
+                'text-center md:text-left': true,
+                'text-2xl md:text-3xl lg:text-4xl': true,
+              }"
+            >
               Choose the Right Path for You
             </h2>
-            <p class="text-lg md:text-xl text-gray-700">
+            <p
+              class="font-poppins font-normal text-[1.125rem] leading-[25px] tracking-normal text-[#262626]"
+              :class="{
+                'text-center md:text-left': true,
+                'text-lg md:text-xl': true,
+              }"
+            >
               Choose Your Program and Start Your Journey Today!
             </p>
           </div>
-          <NuxtLink
-            to="/programs"
-            class="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-6 py-3 rounded-full font-bold text-lg shadow-md"
-          >
-            Explore &rarr;
-          </NuxtLink>
         </div>
 
-        <!-- Search Bar -->
         <div class="mb-8 relative mx-auto">
           <input
+            v-model="searchTerm"
             type="text"
-            placeholder="Search"
+            placeholder="Search programs..."
             class="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -119,30 +119,30 @@
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              ></path>
+              />
             </svg>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-          <ProgramCard v-for="program in programs" :key="program.id" :program="program" />
+        <!-- Program Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ProgramCard v-for="program in filteredPrograms" :key="program.id" :program="program" />
         </div>
       </div>
     </section>
 
-    <!-- What Our Graduates Say (Testimonials) -->
-    <section class="py-16 px-4 md:px-8 bg-white">
+    <!-- Testimonials -->
+    <section class="py-16 px-4 md:px-8 bg-gray-50">
       <TestimonialCarousel :testimonials="testimonials" />
     </section>
 
-    <!-- Newsletter Signup Section -->
+    <!-- Newsletter -->
     <section class="py-16 px-4 md:px-8">
       <NewsletterCta />
     </section>
@@ -153,94 +153,72 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue';
+import type { Ref } from 'vue';
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import ProgramCard from '~/components/ProgramCard.vue';
 import TestimonialCarousel from '~/components/TestimonialCarousel.vue';
 import NewsletterCta from '~/components/NewsletterCta.vue';
+import { featuredPrograms } from '~/data/program';
+import { testimonials } from '~/data/testimonial';
 
-interface Program {
-  id: string;
-  title: string;
-  imageUrl: string;
-  startDate?: string;
-  price?: string;
-}
-
-const programs: Program[] = [
-  {
-    id: 'full-stack-web-dev',
-    title: 'Full-Stack Development',
-    imageUrl: '/dummy-program/program-1.svg',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-  },
-  {
-    id: 'data-science-ml',
-    title: 'Data Science & Machine Learning',
-    imageUrl: '/dummy-program/program-2.svg',
-    startDate: 'November 24, 2024',
-    price: 'Rp 1,500,000',
-  },
-  {
-    id: 'ui-ux-designer',
-    title: 'UI/UX Designer',
-    imageUrl: '/dummy-program/program-3.svg',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-  },
-  {
-    id: 'it-project-management',
-    title: 'IT Project Management',
-    imageUrl: '/dummy-program/program-4.svg',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-  },
-  {
-    id: 'software-testing-qa',
-    title: 'Software Testing & Quality Assurance',
-    imageUrl: '/dummy-program/program-5.svg',
-    startDate: 'November 24, 2024',
-    price: 'Rp 1,500,000',
-  },
-  {
-    id: 'cloud-computing-devops',
-    title: 'Cloud Computing & DevOps',
-    imageUrl: '/dummy-program/program-6.svg',
-    startDate: 'November 15, 2024',
-    price: 'Rp 2,000,000',
-  },
-];
-
-const testimonials = [
-  {
-    name: 'John Doe',
-    role: 'Full-Stack Developer',
-    quote:
-      'The bootcamp transformed my career. The instructors were excellent, and the hands-on projects prepared me perfectly for the industry.',
-    imageUrl: 'https://placehold.co/60x60/d1d5db/4b5563?text=JD',
-  },
-  {
-    name: 'Jane Smith',
-    role: 'UI/UX Designer',
-    quote:
-      'I highly recommend this program. The curriculum is comprehensive, and the career support helped me land my first design role.',
-    imageUrl: 'https://placehold.co/60x60/d1d5db/4b5563?text=JS',
-  },
-];
-
+// --- Page Metadata ---
 useHead({
   title: 'Programs',
   meta: [{ name: 'description', content: 'Explore our wide range of IT bootcamp programs.' }],
 });
+
+const scrollContainer: Ref<HTMLElement | null> = ref(null);
+
+const scrollLeft = () => {
+  if (scrollContainer.value) {
+    scrollContainer.value.scrollBy({ left: -200, behavior: 'smooth' });
+  }
+};
+
+const scrollRight = () => {
+  if (scrollContainer.value) {
+    scrollContainer.value.scrollBy({ left: 200, behavior: 'smooth' });
+  }
+};
+
+const categories = [
+  'Web Development',
+  'Data Science & Analytics',
+  'Mobile App Development',
+  'UI/UX Design',
+];
+
+const searchTerm = ref('');
+
+const filteredPrograms = computed(() => {
+  if (!searchTerm.value) {
+    return featuredPrograms;
+  }
+  const lowerCaseSearchTerm = searchTerm.value.toLowerCase();
+  return featuredPrograms.filter((program) => {
+    return program.title.toLowerCase().includes(lowerCaseSearchTerm);
+  });
+});
 </script>
 
 <style scoped>
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+</style>
+
+<style scoped>
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>

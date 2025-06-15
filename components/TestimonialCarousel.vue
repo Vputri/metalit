@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto max-w-[90%] text-center relative">
     <h2
-      class="font-poppins text-3xl sm:text-4xl md:text-[25px] leading-none tracking-[-1px] capitalize font-semibold text-gray-900 mb-12 rounded-md text-center"
+      class="font-poppins text-3xl sm:text-4xl md:text-[25px] leading-[40px] tracking-[-1px] capitalize font-semibold text-gray-900 mb-12 rounded-md text-center"
     >
       What Our Graduates Say
     </h2>
@@ -106,23 +106,20 @@ const props = defineProps({
 });
 
 const currentIndex = ref(0);
-const itemsPerPage = ref(2); // Default for desktop
+const itemsPerPage = ref(2);
 
-// Touch swipe variables
 const touchStartX = ref(0);
 const touchEndX = ref(0);
-const minSwipeDistance = 50; // Minimum pixels to register a swipe
+const minSwipeDistance = 50;
 
 const updateItemsPerPage = () => {
   if (window.innerWidth < 768) {
-    // md breakpoint is 768px
     itemsPerPage.value = 1;
   } else {
     itemsPerPage.value = 2;
   }
-  // Ensure currentIndex doesn't go out of bounds after resize
   currentIndex.value = Math.min(currentIndex.value, props.testimonials.length - itemsPerPage.value);
-  if (currentIndex.value < 0) currentIndex.value = 0; // Handle cases where testimonials count is less than itemsPerPage
+  if (currentIndex.value < 0) currentIndex.value = 0;
 };
 
 onMounted(() => {
@@ -137,12 +134,10 @@ onUnmounted(() => {
 const visibleTestimonials = computed(() => {
   if (props.testimonials.length === 0) return [];
 
-  // When itemsPerPage is 1 (mobile), we only show the current testimonial
   if (itemsPerPage.value === 1) {
     return [props.testimonials[currentIndex.value]];
   }
 
-  // For desktop (itemsPerPage = 2), we show a slice
   const items = [];
   for (let i = 0; i < itemsPerPage.value; i++) {
     items.push(props.testimonials[(currentIndex.value + i) % props.testimonials.length]);
@@ -165,7 +160,6 @@ const goToTestimonial = (index: number) => {
   currentIndex.value = index;
 };
 
-// Touch event handlers
 const handleTouchStart = (e: TouchEvent) => {
   touchStartX.value = e.touches[0].clientX;
 };
@@ -175,69 +169,57 @@ const handleTouchMove = (e: TouchEvent) => {
 };
 
 const handleTouchEnd = () => {
-  if (touchStartX.value === 0 && touchEndX.value === 0) return; // No touch recorded
+  if (touchStartX.value === 0 && touchEndX.value === 0) return;
 
   const distance = touchStartX.value - touchEndX.value;
 
   if (distance > minSwipeDistance) {
-    // Swiped left (next testimonial)
     nextTestimonial();
   } else if (distance < -minSwipeDistance) {
-    // Swiped right (previous testimonial)
     prevTestimonial();
   }
 
-  // Reset touch values
   touchStartX.value = 0;
   touchEndX.value = 0;
 };
 </script>
 
 <style scoped>
-/* Transition for sliding effect */
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.5s ease;
 }
 
 .slide-enter-from {
-  /* For next testimonial (entering from right) */
   transform: translateX(100%);
   opacity: 0;
 }
 
 .slide-leave-to {
-  /* For current testimonial (leaving to left) */
   transform: translateX(-100%);
   opacity: 0;
 }
 
-/* Specific styling for when a testimonial leaves to ensure smooth transition */
 .slide-leave-active {
   position: absolute;
   top: 0;
-  /* Dynamically adjust width based on itemsPerPage for correct positioning */
   width: calc((100% - var(--gap, 2rem)) / var(--items-per-page, 2));
 }
 
 .slide-enter-active {
-  position: absolute; /* Ensures the entering element doesn't affect layout immediately */
+  position: absolute;
   top: 0;
-  /* Dynamically adjust width for correct positioning */
   width: calc((100% - var(--gap, 2rem)) / var(--items-per-page, 2));
 }
 
-/* Ensure testimonials are always laid out in a row within the transition-group */
 .grid {
   display: grid;
-  /* When itemsPerPage is 1, ensure only one column for testimonial card */
   grid-template-columns: repeat(var(--items-per-page, 2), minmax(0, 1fr));
-  grid-auto-flow: unset; /* Reset auto-flow to allow controlled grid-template-columns */
-  position: relative; /* Essential for absolute positioning of entering/leaving elements */
+  grid-auto-flow: unset;
+  position: relative;
 }
 
-/* Adjust TestimonialCard width inside the grid to ensure proper sliding */
 .TestimonialCard {
-  width: 100%; /* Make sure each card takes full width of its grid column */
+  width: 100%;
 }
 </style>

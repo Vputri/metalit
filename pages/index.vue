@@ -44,7 +44,6 @@
       </div>
     </section>
 
-    <!-- About Metalit Section: Introduces the organization and its mission -->
     <section
       class="relative bg-blue-100 py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-cover bg-center bg-no-repeat"
       :style="{ backgroundImage: `url(${bgAboutImage})` }"
@@ -71,7 +70,6 @@
       </div>
     </section>
 
-    <!-- Features Section: Highlights key benefits of the bootcamp -->
     <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="container mx-auto max-w-[90%] text-center">
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 rounded-md">
@@ -89,7 +87,6 @@
       </div>
     </section>
 
-    <!-- Choose Your Program Section: Showcases featured programs -->
     <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="container mx-auto max-w-[90%]">
         <div
@@ -120,30 +117,25 @@
       </div>
     </section>
 
-    <!-- Testimonials Section: Displays feedback from graduates -->
-    <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
+    <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <TestimonialCarousel :testimonials="testimonials" />
     </section>
 
-    <!-- Registration Form Section: Primary call to action for users to sign up -->
     <section id="registration-form" class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="container mx-auto max-w-[90%]">
         <RegistrationForm />
       </div>
     </section>
 
-    <!-- Newsletter Signup Section: Encourages users to subscribe for updates -->
     <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <NewsletterCta />
     </section>
 
-    <!-- Footer Component: Contains copyright, links, and contact info -->
     <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
-// --- Imports ---
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import FeatureCard from '~/components/FeatureCard.vue';
@@ -157,8 +149,6 @@ import { features } from '~/data/features';
 import { featuredPrograms } from '~/data/program';
 import { testimonials } from '~/data/testimonial';
 
-// --- Page Metadata ---
-// Configures head properties like title and meta description for SEO and browser tabs.
 useHead({
   title: 'Home Page - Metalit IT Bootcamp',
   meta: [

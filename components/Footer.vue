@@ -1,7 +1,6 @@
 <template>
   <footer class="bg-gray-50 text-gray-700 py-12 px-4 md:px-8 shadow-inner">
     <div class="container mx-auto max-w-[90%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-9 gap-8">
-      <!-- Company Info Section - Sekarang mengambil 3 dari 9 kolom di layar besar (30%) -->
       <div class="lg:col-span-3">
         <NuxtLink to="/">
           <img src="/assets/img/logo.png" alt="metalit logo" class="h-12" />
@@ -20,9 +19,7 @@
         </p>
       </div>
 
-      <!-- Contact Us Section - Sekarang mengambil 3 dari 9 kolom di layar besar (30%) -->
       <div class="lg:col-span-2">
-        <!-- Tidak perlu col-start lagi, akan secara otomatis menjadi kolom kedua -->
         <h3
           class="font-poppins font-semibold text-base leading-[20px] tracking-normal text-gray-900 mb-4"
         >
@@ -59,7 +56,6 @@
         </ul>
       </div>
 
-      <!-- Support Section - Sekarang mengambil 1 dari 9 kolom di layar besar (10%) -->
       <div class="lg:col-span-2">
         <h3
           class="font-poppins font-semibold text-base leading-[20px] tracking-normal text-gray-900 mb-4"
@@ -105,9 +101,7 @@
         </ul>
       </div>
 
-      <!-- Social Media Icons Section - Sekarang menjadi kolom ke-4 di grid (20%) -->
       <div class="lg:col-span-2 flex flex-col items-start pt-8 md:pt-0 justify-end">
-        <!-- Disesuaikan untuk menjadi item grid -->
         <div class="flex space-x-4">
           <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300">
             <img src="/assets/icon/twitter.svg" alt="Twitter icon" class="h-7" />
@@ -125,13 +119,11 @@
       </div>
     </div>
 
-    <!-- Copyright Section -->
     <div class="border-t border-gray-200 mt-8 pt-6 text-center text-sm text-gray-500">
       <p class="font-poppins font-normal text-sm leading-[20px] tracking-normal text-[#909090]">
         All Rights Reserved | Copyright © {{ new Date().getFullYear() }} | PT Metamorfosa Teknologi
         Berdikari
       </p>
     </div>
-    <!-- Tidak ada lagi bagian social media terpisah di sini -->
   </footer>
 </template>

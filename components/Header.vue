@@ -48,7 +48,7 @@
           <NuxtLink
             to="/"
             :class="{ 'text-blue-700 font-semibold': isActive('/') }"
-            class="text-gray-700 hover:text-blue-700 transition duration-300"
+            class="hover:text-blue-700 transition duration-300"
           >
             Home
           </NuxtLink>
@@ -59,7 +59,7 @@
             :class="{
               'text-blue-700 font-semibold': isActive('/programs') || isActive('/programs/', true),
             }"
-            class="text-gray-700 hover:text-blue-700 transition duration-300"
+            class="hover:text-blue-700 transition duration-300"
           >
             Programs
           </NuxtLink>
@@ -71,7 +71,7 @@
               'text-blue-700 font-semibold':
                 isActive('/career-support') || isActive('/career-support/', true),
             }"
-            class="text-gray-700 hover:text-blue-700 transition duration-300"
+            class="hover:text-blue-700 transition duration-300"
           >
             Career Support
           </NuxtLink>
@@ -80,13 +80,13 @@
           <NuxtLink
             to="/about"
             :class="{ 'text-blue-700 font-semibold': isActive('/about') }"
-            class="text-gray-700 hover:text-blue-700 transition duration-300"
+            class="hover:text-blue-700 transition duration-300"
           >
             About Us
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="#footer" class="text-gray-700 hover:text-blue-700 transition duration-300">
+          <NuxtLink to="/contact" class="hover:text-blue-700 transition duration-300">
             Contact Us
           </NuxtLink>
         </li>

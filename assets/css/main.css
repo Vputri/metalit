@@ -1,8 +1,9 @@
 /* Import Tailwind CSS base, components, and utilities */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 /* You can add custom global styles here */
 /* For Mantine, you might add some global styling or overrides */
@@ -10,4 +11,14 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.font-inter {
+  font-family: 'Inter', sans-serif;
 }

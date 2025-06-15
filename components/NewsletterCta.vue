@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative bg-blue-700 text-white py-16 px-4 md:px-8 mx-auto rounded-3xl max-w-6xl shadow-xl overflow-hidden"
+    class="relative bg-[#0F5DA9] text-white py-16 px-4 md:px-8 mx-auto rounded-3xl max-w-6xl shadow-xl overflow-hidden"
   >
     <div class="absolute inset-0 z-0 opacity-10">
       <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">

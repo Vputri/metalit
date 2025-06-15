@@ -130,11 +130,10 @@
             <p class="text-gray-700 leading-relaxed mb-4">
               {{ program.description }}
             </p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-outside text-gray-700 space-y-2">
               <li>Duration: {{ program.duration }}</li>
               <li>Level: {{ program.level }}</li>
               <li>Category: {{ program.category }}</li>
-              <!-- Add more overview details here as needed -->
               <li>Comprehensive curriculum covering the latest industry standards.</li>
               <li>Hands-on projects and real-world case studies for practical experience.</li>
               <li>Personalized mentorship from industry experts.</li>
@@ -143,12 +142,11 @@
             <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4 rounded-md">
               Material & Syllabus
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-outside text-gray-700 space-y-2">
               <li v-for="(skill, index) in program.skills" :key="index">{{ skill }}</li>
             </ul>
           </section>
 
-          <!-- Material & Syllabus Section (Updated from Curriculum) -->
           <section id="material" class="mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-6 rounded-md">
               Materials You Will Learn in Bootcamp
@@ -182,7 +180,7 @@
                 </button>
                 <div v-if="module.isOpen" class="mt-3 text-gray-700">
                   <p class="mb-2">{{ module.description }}</p>
-                  <ul class="list-disc list-inside text-gray-600 space-y-1 pl-4">
+                  <ul class="list-disc list-outside text-gray-600 space-y-1 pl-4">
                     <li v-for="(topic, topicIndex) in module.topics" :key="topicIndex">
                       {{ topic }}
                     </li>
@@ -205,7 +203,6 @@
             </div>
           </section>
 
-          <!-- Bootcamp Facilities Section (Updated) -->
           <section id="facilities" class="mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-6 rounded-md">Bootcamp Facilities</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
@@ -243,7 +240,6 @@
             </div>
           </section>
 
-          <!-- Learning Timeline Section (Updated) -->
           <section id="timeline" class="mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-6 rounded-md">Learning Timeline</h2>
             <p class="text-gray-700 leading-relaxed mb-4">Bootcamp Schedule You Can Follow</p>
@@ -318,7 +314,6 @@
             </div>
           </section>
 
-          <!-- Career Support Section (Updated) -->
           <section id="career-support" class="mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-6 rounded-md">Career Support</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
@@ -326,7 +321,6 @@
             </p>
             <div class="space-y-6">
               <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
-                <!-- Resume & Portfolio Enhancement Icon -->
                 <svg
                   class="w-8 h-8 text-blue-600 flex-shrink-0 mr-4"
                   fill="none"
@@ -382,7 +376,6 @@
                 </div>
               </div>
               <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
-                <!-- Job Placement Assistance Icon -->
                 <svg
                   class="w-8 h-8 text-blue-600 flex-shrink-0 mr-4"
                   fill="none"

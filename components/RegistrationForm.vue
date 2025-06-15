@@ -7,7 +7,6 @@
         Registration Form
       </h2>
 
-      <!-- Select Program Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
           <label
@@ -71,7 +70,6 @@
         </div>
       </div>
 
-      <!-- Personal Data Information -->
       <div class="border-t border-gray-200 pt-8 mt-8">
         <h3
           class="text-xl font-bold mb-6 font-poppins font-semibold text-lg leading-none tracking-normal text-[#0F5DA9] border-b-2 border-[#0F5DA9] pb-1"
@@ -338,7 +336,6 @@
         </div>
       </div>
 
-      <!-- Referral Code -->
       <div class="border-t border-gray-200 pt-8 mt-8">
         <label
           for="referralCode"
@@ -355,7 +352,6 @@
         />
       </div>
 
-      <!-- Agreement Checkbox -->
       <div class="flex items-start mt-8">
         <input
           id="agreeTerms"
