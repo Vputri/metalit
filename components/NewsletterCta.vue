@@ -37,7 +37,7 @@
         Stay Connected And Never Miss An Update
       </h2>
       <p
-        class="font-poppins font-normal text-base sm:text-lg md:text-[18px] leading-none tracking-normal mb-8 opacity-90 rounded-md max-w-3xl mx-auto text-center"
+        class="font-poppins font-normal text-base sm:text-lg md:text-[18px] leading-[25px] tracking-normal mb-8 opacity-90 rounded-md max-w-3xl mx-auto text-center"
       >
         Be the first to know about our latest programs, exclusive discounts, and free resources.
         Sign up today and start your journey toward a brighter tech future!

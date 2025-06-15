@@ -72,7 +72,7 @@
     </section>
 
     <!-- Features Section: Highlights key benefits of the bootcamp -->
-    <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="container mx-auto max-w-[90%] text-center">
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 rounded-md">
           Why Our Bootcamp Stands Out

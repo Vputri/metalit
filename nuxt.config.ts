@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   // Nuxt 3 modules
   modules: [
     '@nuxtjs/tailwindcss', // Tailwind CSS module
-    '@nuxt/test-utils/module', // Nuxt Test Utils for Vitest
   ],
 
   // TypeScript configuration
@@ -65,12 +64,6 @@ export default defineNuxtConfig({
     port: 3000,
     host: '0.0.0.0', // Listen on all network interfaces
   },
-
-  // @nuxt/test-utils module options. Vitest configuration is handled in vitest.config.ts
-  // The 'test' key directly in nuxt.config.ts is for module options, not direct Vitest config.
-  // We're removing the detailed Vitest config here as it belongs in vitest.config.ts
-  // If needed, you would put `test: { ...module options... }` but not Vitest's own config.
-  // The `@nuxt/test-utils/module` handles linking `vitest.config.ts`.
 
   // Runtime config (for environment variables)
   runtimeConfig: {

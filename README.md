@@ -36,8 +36,6 @@ This project provides a robust and opinionated boilerplate for building Nuxt.js 
 - **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.  
 - **Mantine**: A comprehensive React components library integrated for styling consistency (via its CSS variables and global styles, direct component usage in Vue may require wrappers or custom components).  
 - **Docker**: Containerization for consistent development, testing, and production environments.  
-- **Unit Testing (Vitest)**: Fast and modern unit testing framework for Vue components and utility functions.  
-- **End-to-End Testing (Cypress)**: Robust E2E testing for simulating user interactions and ensuring critical flows work as expected.  
 
 ---
 

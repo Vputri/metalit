@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-6 rounded-xl shadow-md text-left">
+  <div class="bg-white p-6 rounded-xl text-left">
     <div class="flex items-center mb-4">
       <img
         :src="testimonial.imageUrl"
@@ -16,7 +16,7 @@
         </p>
         <!-- Testimonial Role -->
         <p
-          class="font-poppins font-normal text-xs sm:text-sm md:text-sm leading-none tracking-normal capitalize text-gray-500"
+          class="font-poppins font-normal text-xs sm:text-sm md:text-sm leading-[25px] tracking-normal capitalize text-gray-500"
         >
           {{ testimonial.role }}
         </p>

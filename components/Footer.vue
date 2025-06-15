@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-white text-gray-700 py-12 px-4 md:px-8 shadow-inner">
+  <footer class="bg-gray-50 text-gray-700 py-12 px-4 md:px-8 shadow-inner">
     <div class="container mx-auto max-w-[90%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-9 gap-8">
       <!-- Company Info Section - Sekarang mengambil 3 dari 9 kolom di layar besar (30%) -->
       <div class="lg:col-span-3">

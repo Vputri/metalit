@@ -163,7 +163,7 @@
                   v-model="formData.gender"
                   type="radio"
                   value="male"
-                  class="form-radio text-blue-600 h-5 w-5"
+                  class="form-radio text-blue-600 h-5 w-5 bg-white"
                   name="gender"
                   required
                 />
@@ -177,7 +177,7 @@
                   v-model="formData.gender"
                   type="radio"
                   value="female"
-                  class="form-radio text-blue-600 h-5 w-5"
+                  class="form-radio text-blue-600 h-5 w-5 bg-white"
                   name="gender"
                   required
                 />
@@ -269,7 +269,7 @@
           <div>
             <label
               for="motivation"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-none tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-[20px] tracking-normal"
             >
               What is your motivation for joining this program?
             </label>
@@ -361,12 +361,12 @@
           id="agreeTerms"
           v-model="formData.agreeTerms"
           type="checkbox"
-          class="form-checkbox h-5 w-5 text-blue-600 rounded mt-1"
+          class="form-checkbox h-5 w-5 text-blue-600 rounded mt-1 bg-white"
           required
         />
         <label
           for="agreeTerms"
-          class="ml-3 text-gray-700 text-sm font-poppins font-normal text-base leading-none tracking-normal"
+          class="ml-3 text-gray-700 text-sm font-poppins font-normal text-base leading-[20px] tracking-normal"
         >
           By submitting this form I agree to the
           <a href="#" class="text-blue-600 hover:underline">Terms and Conditions</a> for

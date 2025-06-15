@@ -17,13 +17,7 @@
       "~~/*": ["./*"],
       "@@/*": ["./*"]
     },
-    "types": [
-      // Add types for Vitest, Cypress, etc.
-      "vitest/globals",
-      "cypress",
-      // "@nuxt/types", // If you're using Nuxt 2 bridge, otherwise Nuxt 3 handles types automatically
-      "@nuxtjs/tailwindcss" // For Tailwind CSS module types
-    ]
+    "types": []
   },
   "include": [
     // Files to include in the compilation
@@ -31,8 +25,6 @@
     "**/*.js",
     "**/*.vue",
     ".nuxt/**/*.ts",
-    "vitest.config.ts", // Include Vitest config
-    "cypress.config.ts", // Include Cypress config
     "plugins/**/*.ts", // Include plugins
     "types/**/*.d.ts" // If you have custom global type declarations
   ],

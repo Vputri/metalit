@@ -8,14 +8,14 @@
       </div>
       <div class="col-span-2">
         <h3
-          class="font-poppins text-lg sm:text-lg md:text-lg leading-none tracking-normal font-semibold text-blue-700 text-left"
+          class="font-poppins text-lg sm:text-lg md:text-lg leading-[25px] tracking-normal font-semibold text-blue-700 text-left"
         >
           {{ title }}
         </h3>
       </div>
       <div class="col-span-2 row-span-2">
         <p
-          class="font-poppins text-sm sm:text-base md:text-base leading-none tracking-normal font-normal text-gray-600 text-left"
+          class="font-poppins text-sm sm:text-base md:text-base leading-[20px] tracking-normal font-normal text-gray-600 text-left"
         >
           {{ description }}
         </p>

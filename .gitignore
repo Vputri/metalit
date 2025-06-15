@@ -38,13 +38,6 @@ yarn-error.log*
 .nuxt-storybook/
 .data/
 .swc/
-.vite-inspect/
 
-# cypress
-/cypress/videos/
-/cypress/screenshots/
-/cypress/results/
-
-# vitest
-/vitest-environment-mock.js
-/test/unit/coverage/
+# cursor
+.cursor/
