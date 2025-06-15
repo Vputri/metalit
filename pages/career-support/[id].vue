@@ -14,12 +14,12 @@
           <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <div>
               <h1
-                class="font-poppins font-bold text-[30px]leading-normal tracking-normal text-[#262626] mb-2"
+                class="font-poppins font-bold text-[30px] leading-normal tracking-normal text-[#262626] mb-2"
               >
                 {{ job.title }}
               </h1>
               <p
-                class="font-poppins font-normal text-[20px]leading-normal tracking-normal text-[#262626] mb-4"
+                class="font-poppins font-normal text-[20px] leading-normal tracking-normal text-[#262626] mb-4"
               >
                 {{ job.salary }}
               </p>
@@ -34,7 +34,7 @@
           <div class="bg-gray-100 p-6 rounded-lg mb-8">
             <div class="mb-7">
               <h2
-                class="font-poppins font-medium text-baseleading-normal tracking-normal inline-block py-2 rounded-md text-[#0F5DA9] mb-2"
+                class="font-poppins font-medium text-base leading-normal tracking-normal inline-block py-2 rounded-md text-[#0F5DA9] mb-2"
               >
                 Description
               </h2>
@@ -52,7 +52,7 @@
                   ></path>
                 </svg>
                 <span
-                  class="font-poppins font-normal text-baseleading-normal tracking-normal text-[#262626]"
+                  class="font-poppins font-normal text-base leading-normal tracking-normal text-[#262626]"
                   >{{ job.location }}</span
                 >
               </div>
@@ -70,7 +70,7 @@
                   ></path>
                 </svg>
                 <span
-                  class="font-poppins font-normal text-baseleading-normal tracking-normal text-[#262626]"
+                  class="font-poppins font-normal text-base leading-normal tracking-normal text-[#262626]"
                   >{{ job.employmentType }}</span
                 >
               </div>
@@ -83,7 +83,7 @@
 
             <div class="mb-8">
               <h2
-                class="font-poppins font-medium text-baseleading-normal tracking-normal inline-block py-2 rounded-md text-[#0F5DA9] mb-2"
+                class="font-poppins font-medium text-base leading-normal tracking-normal inline-block py-2 rounded-md text-[#0F5DA9] mb-2"
               >
                 Responsibilities
               </h2>
@@ -98,7 +98,7 @@
 
             <div class="mb-8">
               <h2
-                class="font-poppins font-medium text-baseleading-normal tracking-normal inline-block py-2 rounded-md text-[#0F5DA9] mb-2"
+                class="font-poppins font-medium text-base leading-normal tracking-normal inline-block py-2 rounded-md text-[#0F5DA9] mb-2"
               >
                 Qualifications
               </h2>
@@ -113,7 +113,7 @@
 
             <div v-if="job.additionalSkills && job.additionalSkills.length > 0">
               <h2
-                class="font-poppins font-medium text-baseleading-normal tracking-normal inline-block py-2 rounded-md text-[#0F5DA9] mb-2"
+                class="font-poppins font-medium text-base leading-normal tracking-normal inline-block py-2 rounded-md text-[#0F5DA9] mb-2"
               >
                 Additional skills and qualifications that would be beneficial
               </h2>

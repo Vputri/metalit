@@ -29,7 +29,7 @@
           </p>
           <a
             href="#registration-form"
-            class="inline-block bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl transform hover:scale-105 font-poppins font-semibold text-base sm:text-lg md:text-lgleading-normal tracking-normal"
+            class="inline-block bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl transform hover:scale-105 font-poppins font-semibold text-base sm:text-lg md:text-lg leading-normal tracking-normal"
           >
             Register Now
           </a>
@@ -106,7 +106,7 @@
           </div>
           <NuxtLink
             to="/programs"
-            class="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-md font-poppins font-semibold text-base sm:text-lg md:text-[18px]leading-normal tracking-normal"
+            class="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-md font-poppins font-semibold text-base sm:text-lg md:text-[18px] leading-normal tracking-normal"
           >
             Explore &rarr;
           </NuxtLink>

@@ -18,7 +18,7 @@
 
         <div class="w-full md:w-[70%]">
           <p
-            class="font-poppins font-medium text-[1.125rem]leading-normal tracking-normal text-[#0F5DA9] inline-block py-2 rounded-md mb-2"
+            class="font-poppins font-medium text-[1.125rem] leading-normal tracking-normal text-[#0F5DA9] inline-block py-2 rounded-md mb-2"
           >
             Programs
           </p>

@@ -13,17 +13,17 @@
     </div>
     <div class="p-6">
       <h3
-        class="font-poppins text-base sm:text-lg md:text-[18px]leading-normal tracking-normal font-semibold text-gray-900 mb-2"
+        class="font-poppins text-base sm:text-lg md:text-[18px] leading-normal tracking-normal font-semibold text-gray-900 mb-2"
       >
         {{ program.title }}
       </h3>
       <div
-        class="flex items-center text-sm mb-2 font-poppins text-baseleading-normal tracking-normal font-normal text-gray-500"
+        class="flex items-center text-sm mb-2 font-poppins text-base leading-normal tracking-normal font-normal text-gray-500"
       >
         <span class="mr-2">🗓️</span> {{ program.startDate || 'N/A' }}
       </div>
       <div
-        class="flex items-center text-sm mb-4 font-poppins text-baseleading-normal tracking-normal font-semibold text-gray-500"
+        class="flex items-center text-sm mb-4 font-poppins text-base leading-normal tracking-normal font-semibold text-gray-500"
       >
         <span class="mr-2">💰</span> {{ program.price || 'N/A' }}
       </div>

@@ -2,7 +2,7 @@
   <div class="bg-gray-50 p-8 rounded-xl shadow-md">
     <form class="space-y-8" @submit.prevent="handleSubmit">
       <h2
-        class="font-poppins font-semibold text-2xl sm:text-3xl md:text-[25px]leading-normal tracking-[-1px] capitalize text-gray-900 mb-6 text-center"
+        class="font-poppins font-semibold text-2xl sm:text-3xl md:text-[25px] leading-normal tracking-[-1px] capitalize text-gray-900 mb-6 text-center"
       >
         Registration Form
       </h2>
@@ -11,14 +11,14 @@
         <div>
           <label
             for="selectProgram"
-            class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+            class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
           >
             Select Program
           </label>
           <select
             id="selectProgram"
             v-model="formData.program"
-            class="w-full p-3 rounded-md focus:outline-none bg-gray-50 text-gray-900 font-poppins font-semibold text-lgleading-normal tracking-normal"
+            class="w-full p-3 rounded-md focus:outline-none bg-gray-50 text-gray-900 font-poppins font-semibold text-lg leading-normal tracking-normal"
             required
           >
             <option value="" disabled>Select Program</option>
@@ -33,14 +33,14 @@
         <div>
           <label
             for="selectLocation"
-            class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+            class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
           >
             Pilih Lokasi
           </label>
           <select
             id="selectLocation"
             v-model="formData.location"
-            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
             required
           >
             <option value="" disabled>Select Location</option>
@@ -52,14 +52,14 @@
         <div>
           <label
             for="selectBatch"
-            class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+            class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
           >
             Pilih Batch
           </label>
           <select
             id="selectBatch"
             v-model="formData.batch"
-            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
             required
           >
             <option value="" disabled>Select Batch</option>
@@ -80,7 +80,7 @@
           <div>
             <label
               for="firstName"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               First Name According to KTP
             </label>
@@ -88,7 +88,7 @@
               id="firstName"
               v-model="formData.firstName"
               type="text"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
               placeholder="Enter first name"
               required
             />
@@ -96,7 +96,7 @@
           <div>
             <label
               for="lastName"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               Last Name According to KTP
             </label>
@@ -104,7 +104,7 @@
               id="lastName"
               v-model="formData.lastName"
               type="text"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
               placeholder="Enter last name"
               required
             />
@@ -112,7 +112,7 @@
           <div>
             <label
               for="email"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               Email
             </label>
@@ -120,7 +120,7 @@
               id="email"
               v-model="formData.email"
               type="email"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
               placeholder="Enter email address"
               required
             />
@@ -128,13 +128,13 @@
           <div>
             <label
               for="mobilePhone"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               Mobile Phone Number
             </label>
             <div class="flex">
               <span
-                class="inline-flex items-center px-3 text-sm text-gray-900 bg-white border border-r-0 border-gray-300 rounded-l-md font-poppins font-normal text-baseleading-normal tracking-normal"
+                class="inline-flex items-center px-3 text-sm text-gray-900 bg-white border border-r-0 border-gray-300 rounded-l-md font-poppins font-normal text-base leading-normal tracking-normal"
               >
                 +628
               </span>
@@ -142,7 +142,7 @@
                 id="mobilePhone"
                 v-model="formData.phoneNumber"
                 type="tel"
-                class="rounded-none rounded-r-lg border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-3 bg-white font-poppins font-normal text-baseleading-normal tracking-normal"
+                class="rounded-none rounded-r-lg border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-3 bg-white font-poppins font-normal text-base leading-normal tracking-normal"
                 placeholder="Phone number"
                 required
               />
@@ -151,7 +151,7 @@
           <div class="col-span-1">
             <label
               for="gender"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               Gender
             </label>
@@ -166,7 +166,7 @@
                   required
                 />
                 <span
-                  class="ml-2 text-gray-700 font-poppins font-normal text-baseleading-normal tracking-normal"
+                  class="ml-2 text-gray-700 font-poppins font-normal text-base leading-normal tracking-normal"
                   >Male</span
                 >
               </label>
@@ -180,7 +180,7 @@
                   required
                 />
                 <span
-                  class="ml-2 text-gray-700 font-poppins font-normal text-baseleading-normal tracking-normal"
+                  class="ml-2 text-gray-700 font-poppins font-normal text-base leading-normal tracking-normal"
                   >Female</span
                 >
               </label>
@@ -189,14 +189,14 @@
           <div>
             <label
               for="lastEducation"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               Last Education
             </label>
             <select
               id="lastEducation"
               v-model="formData.lastEducation"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
               required
             >
               <option value="" disabled>Select...</option>
@@ -210,14 +210,14 @@
           <div>
             <label
               for="cityOfDomicile"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               City Of Domicile
             </label>
             <select
               id="cityOfDomicile"
               v-model="formData.cityOfDomicile"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
               required
             >
               <option value="" disabled>Select...</option>
@@ -230,7 +230,7 @@
           <div class="col-span-full">
             <label
               for="completeAddress"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               Complete Address
             </label>
@@ -238,7 +238,7 @@
               id="completeAddress"
               v-model="formData.completeAddress"
               rows="3"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
               placeholder="Enter complete address"
               required
             ></textarea>
@@ -246,14 +246,14 @@
           <div>
             <label
               for="howToFind"
-              class="block text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="block text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
             >
               Where to Find Out About This Program
             </label>
             <select
               id="howToFind"
               v-model="formData.howToFind"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
               required
             >
               <option value="" disabled>Select...</option>
@@ -274,7 +274,7 @@
             <select
               id="motivation"
               v-model="formData.motivation"
-              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
               required
             >
               <option value="" disabled>Select...</option>
@@ -339,7 +339,7 @@
       <div class="border-t border-gray-200 pt-8 mt-8">
         <label
           for="referralCode"
-          class="block text-gray-700 text-sm font-semibold mb-2 font-poppins font-normal text-baseleading-normal tracking-normal"
+          class="block text-gray-700 text-sm font-semibold mb-2 font-poppins font-normal text-base leading-normal tracking-normal"
         >
           Referral Code
         </label>
@@ -347,7 +347,7 @@
           id="referralCode"
           v-model="formData.referralCode"
           type="text"
-          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-baseleading-normal tracking-normal"
+          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900 font-poppins font-normal text-base leading-normal tracking-normal"
           placeholder="Enter referral code (if there are)"
         />
       </div>

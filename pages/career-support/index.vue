@@ -18,12 +18,12 @@
         </div>
         <div class="md:w-3/4 text-center md:text-left mb-10 md:mb-0 order-1 md:order-2 md:pl-16">
           <p
-            class="font-poppins font-medium text-[18px]leading-normal tracking-normal text-[#0F5DA9] inline-block py-2 rounded-md mb-4"
+            class="font-poppins font-medium text-[18px] leading-normal tracking-normal text-[#0F5DA9] inline-block py-2 rounded-md mb-4"
           >
             Career Support
           </p>
           <h1
-            class="font-poppins font-semibold text-[30px]leading-normal tracking-normal text-black mb-4 rounded-md"
+            class="font-poppins font-semibold text-[30px] leading-normal tracking-normal text-black mb-4 rounded-md"
           >
             Job Vacancies
           </h1>
@@ -45,17 +45,17 @@
             class="bg-[#FAFAFA] p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
           >
             <h3
-              class="font-poppins font-semibold text-[18px]leading-normal tracking-normal text-[#262626] mb-4"
+              class="font-poppins font-semibold text-[18px] leading-normal tracking-normal text-[#262626] mb-4"
             >
               {{ job.title }}
             </h3>
             <p
-              class="font-poppins font-normal text-[16px]leading-normal tracking-normal text-[#262626] mb-4"
+              class="font-poppins font-normal text-[16px] leading-normal tracking-normal text-[#262626] mb-4"
             >
               {{ job.salary }}
             </p>
             <p
-              class="font-poppins font-normal text-[16px]leading-normal tracking-normal text-[#262626] mb-4"
+              class="font-poppins font-normal text-[16px] leading-normal tracking-normal text-[#262626] mb-4"
             >
               {{ job.employmentType }}
             </p>
@@ -70,7 +70,7 @@
             </ul>
             <NuxtLink
               :to="`/career-support/${job.id}`"
-              class="block w-[118px] h-[44px] bg-[#0F5DA9] text-white text-center font-poppins font-semibold text-[16px]leading-normal tracking-normal flex items-center justify-center rounded-lg hover:bg-blue-700 transition duration-300"
+              class="block w-[118px] h-[44px] bg-[#0F5DA9] text-white text-center font-poppins font-semibold text-[16px] leading-normal tracking-normal flex items-center justify-center rounded-lg hover:bg-blue-700 transition duration-300"
             >
               Apply
             </NuxtLink>
