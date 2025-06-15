@@ -32,7 +32,7 @@
     </div>
     <div class="container mx-auto text-center relative z-10">
       <h2
-        class="font-poppins text-2xl sm:text-3xl md:text-[30px] leading-none tracking-[-1px] capitalize font-bold mb-6 rounded-md text-center"
+        class="font-poppins text-2xl sm:text-3xl md:text-[30px] leading-normal tracking-[-1px] capitalize font-bold mb-6 rounded-md text-center"
       >
         Stay Connected And Never Miss An Update
       </h2>
