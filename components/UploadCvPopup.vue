@@ -42,12 +42,12 @@
       </button>
 
       <h2
-        class="font-poppins font-bold text-xl md:text-2xl leading-none tracking-normal text-[#262626] mb-1 text-center"
+        class="font-poppins font-bold text-xl md:text-2xlleading-normal tracking-normal text-[#262626] mb-1 text-center"
       >
         Upload CV
       </h2>
       <p
-        class="font-poppins font-normal text-base md:text-lg leading-none tracking-normal text-[#262626] mb-6 text-center"
+        class="font-poppins font-normal text-base md:text-lgleading-normal tracking-normal text-[#262626] mb-6 text-center"
       >
         {{ jobTitle }}
       </p>
@@ -59,7 +59,7 @@
             @click="fileName && !fileError ? null : cvFileInput?.click()"
           >
             <p
-              class="font-poppins font-normal text-sm leading-none tracking-normal text-[#939393] mr-2"
+              class="font-poppins font-normal text-smleading-normal tracking-normal text-[#939393] mr-2"
             >
               {{ fileName || 'Upload File CV' }}
             </p>
@@ -266,14 +266,14 @@
         <div class="flex justify-end space-x-4">
           <button
             type="button"
-            class="px-6 py-2 border border-gray-300 text-[#262626] rounded-lg hover:bg-gray-100 transition duration-300 font-poppins font-normal text-base leading-none tracking-normal"
+            class="px-6 py-2 border border-gray-300 text-[#262626] rounded-lg hover:bg-gray-100 transition duration-300 font-poppins font-normal text-baseleading-normal tracking-normal"
             @click="closePopup"
           >
             Cancel
           </button>
           <button
             type="submit"
-            class="px-6 py-2 bg-[#0F5DA9] text-white rounded-lg hover:bg-blue-700 transition duration-300 font-poppins font-semibold text-base leading-none tracking-normal"
+            class="px-6 py-2 bg-[#0F5DA9] text-white rounded-lg hover:bg-blue-700 transition duration-300 font-poppins font-semibold text-baseleading-normal tracking-normal"
           >
             Submit
           </button>

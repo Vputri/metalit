@@ -29,7 +29,7 @@
           </p>
           <a
             href="#registration-form"
-            class="inline-block bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl transform hover:scale-105 font-poppins font-semibold text-base sm:text-lg md:text-lg leading-none tracking-normal"
+            class="inline-block bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-xl transform hover:scale-105 font-poppins font-semibold text-base sm:text-lg md:text-lgleading-normal tracking-normal"
           >
             Register Now
           </a>
@@ -87,7 +87,7 @@
       </div>
     </section>
 
-    <section class="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section class="py-6 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="container mx-auto max-w-[90%]">
         <div
           class="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12 text-center md:text-left"
@@ -99,14 +99,14 @@
               Choose the Right Path for You
             </h2>
             <p
-              class="font-poppins text-base sm:text-lg md:text-[18px] leading-none tracking-normal font-normal text-gray-700"
+              class="font-poppins text-base sm:text-lg md:text-[18px] leading-normal tracking-normal font-normal text-gray-700"
             >
               Choose Your Program and Start Your Journey Today!
             </p>
           </div>
           <NuxtLink
             to="/programs"
-            class="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-md font-poppins font-semibold text-base sm:text-lg md:text-[18px] leading-none tracking-normal"
+            class="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-md font-poppins font-semibold text-base sm:text-lg md:text-[18px]leading-normal tracking-normal"
           >
             Explore &rarr;
           </NuxtLink>

@@ -7,7 +7,7 @@
       <div
         class="container mx-auto max-w-[90%] flex flex-col md:flex-row items-center justify-between md:gap-x-16"
       >
-        <div class="md:w-[30%] flex justify-center md:justify-start mb-10 md:mb-0">
+        <div class="md:w-[30%] flex justify-center md:justify-start mb-10 md:mb-0 mt-10 md:mt-0">
           <img
             src="/assets/img/hero-icon-program.png"
             alt="API Illustration"
@@ -18,7 +18,7 @@
 
         <div class="w-full md:w-[70%]">
           <p
-            class="font-poppins font-medium text-[1.125rem] leading-none tracking-normal text-[#0F5DA9] inline-block py-2 rounded-md mb-2"
+            class="font-poppins font-medium text-[1.125rem]leading-normal tracking-normal text-[#0F5DA9] inline-block py-2 rounded-md mb-2"
           >
             Programs
           </p>
