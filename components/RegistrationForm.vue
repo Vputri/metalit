@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+  <div class="bg-white p-8 rounded-xl shadow-md">
     <form class="space-y-8" @submit.prevent="handleSubmit">
       <h2
         class="font-poppins font-semibold text-2xl sm:text-3xl md:text-[25px] leading-normal tracking-[-1px] capitalize text-gray-900 mb-6 text-center"
@@ -290,7 +290,7 @@
       <!-- Payment Method -->
       <div class="border-t border-gray-200 pt-8 mt-8">
         <h3
-          class="text-xl font-bold mb-6 font-poppins font-semibold text-lgleading-normal tracking-normal text-[#0F5DA9] border-b-2 border-[#0F5DA9] pb-1"
+          class="text-xl font-bold mb-6 font-poppins font-semibold text-lg leading-normal tracking-normal text-[#0F5DA9] border-b-2 border-[#0F5DA9] pb-1"
         >
           Payment Method
         </h3>
