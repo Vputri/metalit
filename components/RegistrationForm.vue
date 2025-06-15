@@ -161,7 +161,7 @@
                   v-model="formData.gender"
                   type="radio"
                   value="male"
-                  class="form-radio text-blue-600 h-5 w-5 bg-white"
+                  class="form-radio h-5 w-5"
                   name="gender"
                   required
                 />
@@ -175,7 +175,7 @@
                   v-model="formData.gender"
                   type="radio"
                   value="female"
-                  class="form-radio text-blue-600 h-5 w-5 bg-white"
+                  class="form-radio h-5 w-5"
                   name="gender"
                   required
                 />
@@ -357,7 +357,7 @@
           id="agreeTerms"
           v-model="formData.agreeTerms"
           type="checkbox"
-          class="form-checkbox h-5 w-5 text-blue-600 rounded mt-1 bg-white"
+          class="form-checkbox h-5 w-5 text-blue-600 rounded mt-1 bg-white dark:bg-gray-700 dark:text-blue-400"
           required
         />
         <label

@@ -22,3 +22,16 @@ body {
 .font-inter {
   font-family: 'Inter', sans-serif;
 }
+
+/* In your main CSS file, e.g., styles.css */
+.form-radio {
+  /* Default light mode styles */
+  background-color: white;
+  color: theme('colors.blue.600'); /* Or any color you prefer */
+}
+
+.dark .form-radio {
+  /* Dark mode styles */
+  background-color: theme('colors.gray.700'); /* Dark background for the radio button */
+  color: theme('colors.blue.400'); /* Color for the radio button's "dot" */
+}
